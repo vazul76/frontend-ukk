@@ -16,12 +16,16 @@
   <div class="relative w-full max-w-5xl min-h-[50vh] flex flex-col md:flex-row overflow-hidden">
     <!-- Tulisan "Hello!" -->
     <div class="flex-1 bg-transparent flex items-center justify-center text-white z-10 p-8 md:p-12">
-      <h1 class="text-6xl md:text-5xl font-bold">Long Time No See!</h1>
+      <h1 class="text-6xl md:text-5xl font-bold">Hello!</h1>
     </div>
     <!-- Form login -->
     <div class="flex-1 p-0 z-0" style="font-family: 'Rhodium Libre'">
     <div class="h-full w-full backdrop-blur-md bg-white/10 p-6 md:p-10 flex items-center justify-center rounded-3xl md:rounded-3xl">
       <form class="flex flex-col gap-4 w-full max-w-sm">
+        <div>
+          <label class="text-sm font-medium text-black mb-1 block" for="email">Username:</label>
+          <input class="w-full rounded-lg p-2.5 text-sm bg-stone-50/20 text-gray-900" id="name" type="name" name="name" placeholder="Enter Username" required>
+        </div>
         <div>
           <label class="text-sm font-medium text-black mb-1 block" for="email">Email:</label>
           <input class="w-full rounded-lg p-2.5 text-sm bg-stone-50/20 text-gray-900" id="email" type="email" name="email" placeholder="email@example.com" required>
@@ -29,10 +33,9 @@
         <div>
           <label class="text-sm font-medium text-black mb-1 block" for="password">Password:</label>
           <input class="w-full rounded-lg p-2.5 text-sm bg-stone-50/20 text-gray-900" id="password" type="password" name="password" placeholder="Enter Password" required>
-          <p class="mt-2 text-[#6C8976] hover:text-emerald-950 cursor-pointer text-sm">Forgot password?</p>
         </div>
         <div class="flex flex-col gap-2">
-          <a href="/login" class="bg-[#6C8976] text-white px-4 py-2 rounded-lg hover:bg-emerald-950 transition-colors text-center">Login</a>
+          <a href="/login" class="bg-[#6C8976] text-white px-4 py-2 rounded-lg hover:bg-emerald-950 transition-colors text-center">Register</a>
           <a href="/auth/google" class="transition-colors focus:ring-2 p-0.5 disabled:cursor-not-allowed bg-white hover:bg-gray-100 text-gray-900 border border-gray-200 disabled:bg-gray-300 disabled:text-gray-700 rounded-lg text-center">
             <span class="flex items-center justify-center gap-2 font-medium py-1 px-2.5 text-base">
                 <svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.1"
@@ -58,7 +61,7 @@
 
         <!-- Sign up -->
         <div class="text-center text-white mt-4 text-sm">
-          New user? <a href="/signup" class="text-[#6C8976] underline hover:text-emerald-950">Create account here</a>
+          Have account? <a href="/signup" class="text-[#6C8976] underline hover:text-emerald-950">Log in here</a>
         </div>
       </form>
     </div>
