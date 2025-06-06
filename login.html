@@ -1,39 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Login Form</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="./assets/style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 </head>
+<body class="bg-gradient-to-b from-[#0f2b24] to-[#c6d7d3] min-h-screen flex items-center justify-center px-4">
 
-<body class="min-h-screen flex items-center justify-center bg-cover bg-center px-4" style="background-image: url('./assets/images/bg-login.jpg');">
-  <div class="relative w-full max-w-5xl min-h-[50vh] flex flex-col md:flex-row overflow-hidden">
-    <!-- Tulisan "Hello!" -->
-    <div class="flex-1 bg-transparent flex items-center justify-center text-white z-10 p-8 md:p-12">
-      <h1 class="text-6xl md:text-5xl font-bold">Long Time No See!</h1>
+  <!-- Wrapper dengan background gambar -->
+  <div class="w-full max-w-5xl min-h-[75vh] bg-[url('./assets/images/bg-login.jpg')] bg-cover bg-center rounded-3xl shadow-2xl flex flex-col md:flex-row overflow-hidden">
+
+    <!-- Kiri: Teks sambutan -->
+    <div class="flex-1 flex items-center justify-center p-8 backdrop-brightness-75 text-white">
+      <h1 class="text-4xl md:text-5xl font-bold drop-shadow-lg">Long time no see!</h1>
     </div>
-    <!-- Form login -->
-    <div class="flex-1 p-0 z-0" style="font-family: 'Rhodium Libre'">
-    <div class="h-full w-full backdrop-blur-md bg-white/10 p-6 md:p-10 flex items-center justify-center rounded-3xl md:rounded-3xl">
-      <form class="flex flex-col gap-4 w-full max-w-sm">
-        <div>
-          <label class="text-sm font-medium text-black mb-1 block" for="email">Email:</label>
-          <input class="w-full rounded-lg p-2.5 text-sm bg-stone-50/20 text-gray-900" id="email" type="email" name="email" placeholder="email@example.com" required>
-        </div>
-        <div>
-          <label class="text-sm font-medium text-black mb-1 block" for="password">Password:</label>
-          <input class="w-full rounded-lg p-2.5 text-sm bg-stone-50/20 text-gray-900" id="password" type="password" name="password" placeholder="Enter Password" required>
-          <p class="mt-2 text-[#6C8976] hover:text-emerald-950 cursor-pointer text-sm">Forgot password?</p>
-        </div>
-        <div class="flex flex-col gap-2">
-          <a href="/login" class="bg-[#6C8976] text-white px-4 py-2 rounded-lg hover:bg-emerald-950 transition-colors text-center">Login</a>
-          <a href="/auth/google" class="transition-colors focus:ring-2 p-0.5 disabled:cursor-not-allowed bg-white hover:bg-gray-100 text-gray-900 border border-gray-200 disabled:bg-gray-300 disabled:text-gray-700 rounded-lg text-center">
+
+    <!-- Kanan: Form Login -->
+    <div class="flex-1 flex items-center justify-center backdrop-brightness-75">
+      <div class="w-full max-w-sm text-white bg-white/40 backdrop-blur-md p-3 md:p-10 rounded-3xl shadow-lg">
+        <form class="flex flex-col gap-4">
+          <div>
+            <label class="text-sm font-medium block mb-1 text-black" for="email">Email:</label>
+            <input class="w-full rounded-lg p-2.5 text-sm bg-white/20 text-white placeholder:text-white/70" id="email" type="email" name="email" placeholder="email@example.com" required>
+          </div>
+          <div>
+            <label class="text-sm font-medium block mb-1 text-black" for="password">Password:</label>
+            <input class="w-full rounded-lg p-2.5 text-sm bg-white/20 text-white placeholder:text-white/70" id="password" type="password" name="password" placeholder="Enter Password" required>
+            <p class="mt-2 hover:text-white cursor-pointer text-sm text-black">Forgot password?</p>
+          </div>
+          <div class="flex flex-col gap-2">
+            <a href="/login" class="bg-[#6C8976] text-white px-4 py-2 rounded-lg hover:bg-emerald-950 transition-colors text-center">Login</a>
+            <a href="/auth/google" class="transition-colors focus:ring-2 p-0.5 disabled:cursor-not-allowed bg-white hover:bg-gray-100 text-gray-900 border border-gray-200 disabled:bg-gray-300 disabled:text-gray-700 rounded-lg text-center">
             <span class="flex items-center justify-center gap-2 font-medium py-1 px-2.5 text-base">
                 <svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.1"
                 viewBox="0 0 48 48" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
@@ -51,18 +53,17 @@
                     c-0.792,2.237-2.231,4.166-4.087,5.571l6.19,5.238C36.971,39.205,44,34,44,24
                     C44,22.659,43.862,21.35,43.611,20.083z" />
                 </svg>
-                Sign in with Google
+                Continue with Google
             </span>
             </a>
-        </div>
-
-        <!-- Sign up -->
-        <div class="text-center text-white mt-4 text-sm">
-          New user? <a href="/signup" class="text-[#6C8976] underline hover:text-emerald-950">Create account here</a>
-        </div>
-      </form>
+          </div>
+          <div class="text-center mt-4 text-sm text-white">
+            New user? <a href="./register.html" class="text-[#003332] underline hover:text-emerald-200">Create account here</a>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
-</body>
 
+</body>
 </html>
